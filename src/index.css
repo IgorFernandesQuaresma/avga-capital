@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+/* --- Substitua todos os imports do Tailwind por esta linha --- */
+@import "tailwindcss";
+
+:root {
+  /* ... seu --color-gradient ... */
+  --color-gradient: linear-gradient(
+    90deg,
+    rgba(208,162,107,1) 0%,
+    rgba(248,248,249,1) 95%
+  );
+}
+
+/* --- Adicione o código abaixo para aplicar a fonte --- */
+
+/* Usamos @layer base para garantir que essa regra 
+   seja tratada como um estilo base pelo Tailwind.
+*/
+@layer base {
+  body {
+    /* Define 'Montserrat' como a fonte principal e 'sans-serif' como fallback */
+    font-family: 'Montserrat', sans-serif; 
+  }
+}
